@@ -1,0 +1,22 @@
+{
+  "name": "HIW",
+  "version": "0.0.0",
+  "description": "HIW",
+  "main": "app.js",
+  "author": {
+    "name": "HNAtina",
+    "email": ""
+  },
+  "dependencies": {
+    "angular": "^1.4.3",
+    "angular2": "^2.0.0-alpha.33",
+    "express": "3.4.4",
+    "hiw-api": "^5.2.0",
+    "jade": "*",
+    "stylus": "*",
+    "typescript": "^1.5.3",
+    "typescript-api": "^1.0.0",
+    "typescript-dev": "^0.9.0",
+    "typescripter": "^1.0.0"
+  }
+}

@@ -1,0 +1,2 @@
+C:\Users\HNAtina\Documents\Visual Studio 2013\Projects\HIW\HIW\obj\Debug\HIW.njsprojResolveAssemblyReference.cache
+C:\Users\HNAtina\Documents\Visual Studio 2013\Projects\HIW\HIW\bin\Microsoft.NodejsTools.WebRole.dll
