@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script><!-- load angular 1.2.4 -->
+
+    <script src="../public/javascripts/controllers/main.js"></script> <!-- load up our controller -->
+    <script src="../public/javascripts/core.js"></script> <!-- load our main application -->
+
+    <title>This is the title!</title>
+
+</head>
+<body ng-app="mainApp" ng-controller="mainController">
+    <!--<select ng-model="string"> ../public (browser)/javascripts/controllers/main.js
+        ...
+    </select>-->
+    <h1>{{data.availableOptions}}</h1>
+    <table>
+        <thead>
+            <tr><th colspan="2">List of Locales, {{test}}</th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in data.availableOptions">
+                <td>{{$index + 1}}</td>
+                <td>
+                    {{data.fullName}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

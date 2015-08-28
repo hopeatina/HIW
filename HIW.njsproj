@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Content Include="public\javascripts\controllers\main.js" />
+    <Content Include="public\javascripts\core.js" />
+    <Content Include="public\javascripts\services\HIWservices.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +66,7 @@
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
     <Content Include="views\about.jade" />
+    <Content Include="views\index.html" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
   </ItemGroup>
@@ -71,6 +75,8 @@
     <Folder Include="public\fonts\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
+    <Folder Include="public\javascripts\controllers\" />
+    <Folder Include="public\javascripts\services\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
