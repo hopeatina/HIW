@@ -8,7 +8,7 @@ var apiKey = "da45e11d07eb4ec8950afe79a0d76feb";
 var api = new hiw.API(apiKey);
 var http = require("http");
 
-exports.index = function(req, res) {
+exports.index2 = function(req, res) {
 
     var rawresponse;
     var founderror;
@@ -40,7 +40,7 @@ exports.index = function(req, res) {
 
 };
 
-exports.index2 = function (req, res) {
+exports.index = function (req, res) {
     
     var rawresponse;
     var founderror;
@@ -55,8 +55,8 @@ exports.index2 = function (req, res) {
         hiw.IndicatorDescription.getByID(279, api, function (data, response, error) {
             indicatorDescription = data;
             
-            console.log(indicatorDescription.fullDescription);
-            console.log(indicatorDescription);
+           // console.log(indicatorDescription.fullDescription);
+            //console.log(indicatorDescription);
             title = "Express"; //response: rawresponse, error: founderror
 
 

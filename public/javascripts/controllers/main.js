@@ -1,7 +1,7 @@
 ﻿angular.module('controllerModule', [])
 
 	// inject the HIWmethods service factory into our controller
-	.controller('mainController', ['$scope', function($scope, HIWmethods) {
+	.controller('mainController', ['$scope','HIWmethods', function($scope, HIWmethods) {
 		$scope.formData = {};
 		$scope.loading = true;
 
@@ -13,6 +13,8 @@
 				$scope.locales = {
 				    availableOptions: data
 		}
+				console.log(data);
+				console.log($scope.locales.availableOptions);
 				$scope.loading = false;
 			});
 

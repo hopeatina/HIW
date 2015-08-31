@@ -1,7 +1,7 @@
 ﻿var hiw = require("hiw-api");
 var api = new hiw.API(apiKey);
 
-angular.module('HIWservices', []).
+var HIWservices = angular.module('HIWservices', []).
   factory('HIWmethods', function () {
 
       var hiwapi = {};
