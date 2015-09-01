@@ -12,6 +12,7 @@
     "express": "3.4.4",
     "hiw-api": "^5.2.0",
     "jade": "*",
+    "requirejs": "^2.1.20",
     "stylus": "*"
   }
 }
