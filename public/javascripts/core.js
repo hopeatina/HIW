@@ -1,40 +1,20 @@
-﻿var app = angular.module('mainApp', []);
+﻿//var app = angular.module('mainApp', []);
 
-var hiw = require("hiw-api");
-var api = new hiw.API(apiKey);
+//var hiw = require("hiw-api");
+//var api = new hiw.API(apiKey);
 
-app.factory('HIWmethods', function () {
+//app.factory('HIWmethods', function () {
 
-    var hiwapi = {};
+//    var hiwapi = {};
 
-    hiwapi.getLocales = function () {
-        return hiw.Locale.getAll();
-    }
+//    hiwapi.getLocales =  hiw.Locale.getAll(api, function(data, response, error) {
+//            $scope.locales = data; //Array of Locale
+//            //console.log(locales);
+//        });
+    
 
-    return hiwapi;
-});
-
-app.controller('mainController', 
-    function($scope, HIWmethods, api) {
-        
-        $scope.loading = true;
-
-        // GET =====================================================================
-        // when landing on the page, get all todos and show them
-        // use the service to get all the todos
-        $scope.test = "Hello world!!!!!!!!!!";
-        console.log($scope.test);
-        HIWmethods.getLocales(api).then(function(data) {
-            $scope.locales = {
-                availableOptions: data
-            }
-            console.log($scope.locales.availableOptions);
-            $scope.loading = false;
-        });
-
-
-    });
-
+//    return hiwapi;
+//});
 
 
 var myapp = angular.module("MyApp", []);
@@ -59,3 +39,17 @@ myapp.controller("MyCtrl", function ($scope, UserService) {
 myapp.controller("AnotherCtrl", function ($scope, UserService) {
     $scope.firstUser = UserService.first();
 });
+
+myapp.controller('mainController',
+    function ($scope) {
+
+        $scope.loading = true;
+
+        // GET =====================================================================
+        // when landing on the page, get all todos and show them
+        // use the service to get all the todos
+        $scope.test = "Hello world!!!!!!!!!!";
+        console.log($scope.test);
+        
+        $scope.loading = false;
+    });

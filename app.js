@@ -8,7 +8,10 @@ var routes = require("./routes");
 var http = require("http");
 var path = require("path");
 var app = express(); // all environments
-app.set("port", process.env.PORT || 3001);
+var hiw = require("hiw-api");
+var apiKey = "da45e11d07eb4ec8950afe79a0d76feb";
+var api = new hiw.API(apiKey);
+app.set("port", process.env.PORT || 7001);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 app.use(express.favicon());
