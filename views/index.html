@@ -1,17 +1,24 @@
 ﻿<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="MyApp" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script><!-- load angular 1.2.4 -->
 
+<<<<<<< HEAD
     <!--<script src="/javascripts/controllers/main.js"></script> <!-- load up our controller -->
     <!-- <script src="/javascripts/services/HIWservices.js"></script>  load up our controller -->
     <!-- <script src="/javascripts/core.js"></script> load our main application -->
+=======
+   <!-- <script src="/javascripts/controllers/main.js"></script> <!-- load up our controller -->
+   <!-- <script src="/javascripts/services/HIWservices.js"></script> <!-- load up our controller -->
+    <script src="/javascripts/core.js"></script> <!-- load our main application -->
+>>>>>>> origin/angular-setup
 
     <title>This is the title!</title>
 
 </head>
+<<<<<<< HEAD
 <body ng-app="MyApp">
     <!--<select ng-model="string"> ../public (browser)/javascripts/controllers/main.js
         ...
@@ -58,5 +65,37 @@
 </div>
     <script data-main="/javascripts/common" src="/javascripts/require.js"></script>
     
+=======
+<body>
+<!--<select ng-model="string"> ../public (browser)/javascripts/controllers/main.js
+    ...
+</select>-->
+<h1>{{data.availableOptions}}</h1>
+<table  ng-controller="mainController">
+    <thead>
+    <tr><th colspan="2">List of Locales, {{test}}</th></tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="data in locales.availableOptions">
+        <td>{{$index + 1}}</td>
+        <td>
+            {{data.fullName}}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <div ng-controller="MyCtrl">
+        <ul ng-repeat="user in users">
+            <li>{{user}}</li>
+        </ul>
+        <div class="nested" ng-controller="AnotherCtrl">
+            First user: {{firstUser}}
+        </div>
+    </div>
+
+</div>
+>>>>>>> origin/angular-setup
 </body>
 </html>
