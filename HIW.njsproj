@@ -35,12 +35,8 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Content Include="public\javascripts\controllers\main.js" />
-    <Content Include="public\javascripts\myapp.js" />
+    <Content Include="public\javascripts\core.js" />
     <Content Include="public\javascripts\services\HIWservices.js" />
-    <Content Include="public\javascripts\main.js" />
-    <Content Include="public\javascripts\common.js" />
-    <Content Include="public\javascripts\home.js" />
-    <Content Include="public\javascripts\require.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
