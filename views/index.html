@@ -13,49 +13,34 @@
 
 </head>
 <body ng-app="MyApp">
-    <!--<select ng-model="string"> ../public (browser)/javascripts/controllers/main.js
-        ...
-    </select>-->
-    <!--<h1>{{data.availableOptions}}</h1>
-    <table>
-        <thead>
-            <tr><th colspan="2">List of Locales, {{test}}</th></tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="data in locales.availableOptions">
-                <td>{{$index + 1}}</td>
-                <td>
-                    {{data.fullName}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <!--<select ng-model="string"> ../public (browser)/javascripts/controllers/main.js
+            ...
+        </select>-->
+        <!--<h1>{{data.availableOptions}}</h1>
+        <table>
+            <thead>
+                <tr><th colspan="2">List of Locales, {{test}}</th></tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in locales.availableOptions">
+                    <td>{{$index + 1}}</td>
+                    <td>
+                        {{data.fullName}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>-->
 
-    <div>
-        <div ng-controller="mainController">
-            <ul ng-repeat="user in locales.availableOptions">
-                <li>{{user.fullName}}</li>
+
+        <div ng-controller="MyCtrl">
+            <ul ng-repeat="user in users">
+                <li>{{user}}</li>
             </ul>
             <div class="nested" ng-controller="AnotherCtrl">
                 First user: {{firstUser}}
             </div>
         </div>
 
-    </div>-->
-<div ng-controller="MyCtrl">
-    <ul ng-repeat="user in users">
-        <li>{{user}}</li>
-    </ul>
-    <div class="nested" ng-controller="AnotherCtrl">
-        First user: {{firstUser}}
-    </div>
-</div>
-<div ng-controller="YourCtrl">
-    <ul ng-repeat="user in users">
-        <li>{{user}}</li>
-    </ul>
-
-</div>
     <script data-main="/javascripts/common" src="/javascripts/require.js"></script>
     
 </body>

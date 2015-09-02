@@ -7,7 +7,8 @@ requirejs.config({
         HIWservices: 'services/HIWservices.js',
         core: 'core.js',
         main: '/javascripts/main',
-        home: 'home'
+        home: 'home',
+        angular: 'angular'
     },
     shim: {
         angular: {
@@ -15,4 +16,5 @@ requirejs.config({
         }
     }
 });
+
 requirejs(['home']);

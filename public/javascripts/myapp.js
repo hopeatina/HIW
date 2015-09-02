@@ -33,8 +33,9 @@
 //        });
 //    });
 
-define(['angular'], function(angular) {
+define([], function() {
     var myapp = angular.module("MyApp", []);
+    console.log("got into my app");
     return myapp;
 });
 
