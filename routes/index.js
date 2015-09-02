@@ -23,15 +23,40 @@ exports.index2 = function(req, res) {
         hiw.IndicatorDescription.getByID(279, api, function(data, response, error) {
             indicatorDescription = data;
 
-            console.log(indicatorDescription.fullDescription);
-            console.log(indicatorDescription);
+            //for (var thing in indicatorDescription) {
+            //    if (indicatorDescription.hasOwnProperty(thing) && indicatorDescription[thing] === undefined) {
+            //    } else {
+            //        var obj = indicatorDescription[thing];
+            //        console.log(thing + " = " + obj);
+            //        //for (var prop in obj) {
+            //        //    if (obj.hasOwnProperty(prop)) {
+            //        ////        console.log(prop + " = " + obj[prop]);
+            //        //    }
+            //        //}
+            //    }
+            //}
+            //console.log(thing.fullDescription);
+        
+            
+            //console.log(indicatorDescription.fullDescription);
+            //console.log(indicatorDescription);
             title = "Express"; //response: rawresponse, error: founderror
-
 
         }),
         hiw.Locale.getAll(api, function(data, response, error) {
             locales = data; //Array of Locale
-            //console.log(locales);
+            for (var thing in locales) {
+             
+                    var obj = locales[thing].fullName;
+                    console.log(thing + " = " + obj);
+                    //for (var prop in obj) {
+                    //    if (obj.hasOwnProperty(prop)) {
+                    ////        console.log(prop + " = " + obj[prop]);
+                    //    }
+                    //}
+                
+            }
+            console.log(locales.length);
         })
     ], function (data) {
         
@@ -49,30 +74,11 @@ exports.index = function (req, res) {
     //var allinidcatorsURL = '/Indicators/ { page }?Key= { key }';
     //var filter = new hiw.Filter()
     //    .addEqual(hiw.Locale.Fields.ScriptFullName, "Arkansas");
-    
-    
-    hiw.Synchronizer.sync([
-        hiw.IndicatorDescription.getByID(279, api, function (data, response, error) {
-            indicatorDescription = data;
-            
-           // console.log(indicatorDescription.fullDescription);
-            //console.log(indicatorDescription);
-            title = "Express"; //response: rawresponse, error: founderror
-
-
-        }),
-        hiw.Locale.getAll(api, function (data, response, error) {
-            locales = data; //Array of Locale
-            //console.log(locales);
-        })
-    ], function (data) {
-        
-        res.sendfile('./views/index.html');
-        //res.json(locales);
-        
-    });
+    res.sendfile('./views/index.html');
+    //res.json(locales);
 
 };
+
 exports.about = function (req, res) {
 
     res.render("about", { title: "About", year: new Date().getFullYear(), message: "Your application description page." });
